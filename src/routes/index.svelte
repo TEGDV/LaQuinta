@@ -94,7 +94,8 @@ function mc(){
 var menuD = 0;
 
 function deployMenu(){
-  if(menuD === 0){
+  if(scrWidth.matches){
+      if(menuD === 0){
     document.getElementById('mn').style.left = "0px";
     menuD = 1;
   }
@@ -102,6 +103,8 @@ function deployMenu(){
     document.getElementById('mn').style.left = "-50vw";
     menuD = 0;
   }
+  }
+
   
 
 }
