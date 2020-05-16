@@ -9,7 +9,9 @@ var paquete = 'aventura';
 var paqText = 'Alojamiento completo, transporte y las comidas que se describen en cada itinerario, junto con los servicios del líder sdel grupo y el resto del personal, como se indica en la descripción. Las excursiones turísticas, billetes de entradas y otras inclusiones también se enumeran en los informes de viaje. Al acampar, suministramos el equipo completo de camping. \n Alojamiento. Casi todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible. ';
 var text = new String();
 var texto = new Array();
-texto[0] = "Hooospedaje tipo Camping, nos llamamos La Quinta Maravilla y te brindaremos el Confort que te mereces.";
+
+texto[0] = "El Test Fuinciono Hoospedaje tipo Camping, nos llamamos La Quinta Maravilla y te brindaremos el Confort que te mereces.";
+
 texto[1] = "Conoce el hermoso cañon el sumidero en Tuxtla Gutierrez Chiapas uno de los estados mas hermosos de todo Mexico";
 text = texto[0];
 var x = 0;
