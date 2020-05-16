@@ -528,7 +528,7 @@ function deployMenu(){
 
      #activities {
   
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
         grid-template-areas: "paq_title "
                                "img" ;   
@@ -541,9 +541,37 @@ function deployMenu(){
   .paq_title{
     grid-area: paq_title;
     text-align: left;
-    padding: 5%;
+    padding: 1%;
+    padding-left: 5%;
+    background-color: rgba(0, 0, 0, 0.596);
   }
-
+  #paq_c{
+    background-image: unset;
+  }
+  .contText{
+    font-size: .5em;
+  }
+  .liav{
+    font-size: .5em;
+    color: aliceblue;
+  }
+  .paq_list{
+    background-color: rgba(0, 0, 0, 0.596);
+  }
+  .sub_item-info{
+    min-height: 80px;
+  }
+  .sub_item-info p,a{
+    font-size: 14px;
+    
+  }
+  #contact_us{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,6fr);
+    }
+    .cont_img img{
+      max-height: 80px;
+    }
   }
 
 </style>
