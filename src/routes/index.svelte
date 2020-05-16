@@ -184,7 +184,7 @@ function deployMenu(){
    width: 100vw;
    display: grid;
    grid-template-columns: .15fr 1fr .15fr;
-   grid-template-rows: .15fr 1fr .15fr;
+   grid-template-rows: .05fr 1fr .15fr;
    grid-template-areas: ". paq ."
                         "le ct ri"
                         ". . .";
