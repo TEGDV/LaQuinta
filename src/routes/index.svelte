@@ -6,7 +6,7 @@ import { fly } from 'svelte/transition';
 let mOption = 0;
 let pOption = 0;
 var paquete = 'aventura';
-var paqText = 'Alojamiento completo, transporte y las comidas que se describen en cada itinerario, junto con los servicios del líder sdel grupo y el resto del personal, como se indica en la descripción. Las excursiones turísticas, billetes de entradas y otras inclusiones también se enumeran en los informes de viaje. Al acampar, suministramos el equipo completo de camping. \n Alojamiento. Casi todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible. ';
+var paqText = 'Al acampar, suministramos el equipo completo de camping. todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible. ';
 var text = new String();
 var texto = new Array();
 
@@ -38,7 +38,7 @@ function chgCnt2(){
 function paventura(){
   paquete = 'aventura';
   pOption = 0;
-  paqText = 'Alojamiento completo, transporte y las comidas que se describen en cada itinerario, junto con los servicios del líder sdel grupo y el resto del personal, como se indica en la descripción. Las excursiones turísticas, billetes de entradas y otras inclusiones también se enumeran en los informes de viaje. Al acampar, suministramos el equipo completo de camping. \n Alojamiento. Casi todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible. ';
+  paqText = 'Al acampar, suministramos el equipo completo de camping. todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible.';
   document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/H2yACAJ.jpg')";
   
 }
@@ -66,6 +66,15 @@ function mc(){
   mOption = 2;
 }
 
+
+
+function deployMenu(){
+
+   
+  
+
+}
+
 </script>
 
 <style>
@@ -90,7 +99,7 @@ function mc(){
     z-index: 0;
   }
 
-  .menu {
+  #mn {
     position: fixed;
     top: 0;
     left: 0;
@@ -224,7 +233,7 @@ function mc(){
 
  #activities {
       display: grid;
-   grid-template-columns: 1fr 1.75fr;
+   grid-template-columns: minmax(520px, auto) 1.75fr;
    grid-template-rows: .1fr 1fr;
    grid-template-areas: "paq_title img"
                         ". img"  ;
@@ -303,9 +312,9 @@ function mc(){
     justify-content: space-between;
   }
   .contText{
-    width: 75%;
+    max-width: 95%;
     background-color: rgba(0, 0, 0, 0.596);
-    height: 75%;
+    max-height: 95%;
     font-size: 24px;
     border-radius: 20px;
     border:solid white 1px;
@@ -326,7 +335,8 @@ function mc(){
    
     background: #c6996f;
     font-family: Arial, Helvetica, sans-serif;
-    height: 72px;
+    max-height: 72px;
+         min-height: 2em;
     width: 40%;
     color: aliceblue;
   }
@@ -387,15 +397,74 @@ function mc(){
     max-width: 150px;
     
   }
+
+
+  /*Responsive 1366px*/
+  @media (max-width:1365px){
+        .app_content{
+              grid-template-areas:
+        "paq paq paq"
+        "ct ct ct"
+        "le . ri";
+        }
+        .pl{
+          height: 100%;
+          border:none;
+        }
+        figure{
+          all:unset;
+        }
+        .paq_img{
+              
+              width: 100px;
+             
+        }
+
+        .paq_title{
+          font-size: 70%;
+        }
+       
+  }
+  @media (max-width:1023px){
+    #mn{
+      flex-direction: column;
+    align-items: self-start;
+    width: 50vw;
+    left:-50vw;
+    height: 100vh;
+    z-index: 1;
+        justify-content: flex-start;
+    }
+    .menu_items{
+      
+      
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+    .ml{
+      width: 100%;
+    }
+    .logo{
+      position: fixed;
+      top:0;
+      left:0;
+    }
+    .app_content{
+      top: 0;
+      height: 100vh;
+    }
+  }
+
 </style>
   <figure class="bg">
     <img src="https://i.imgur.com/fMS5g12.jpg" alt="">
   </figure>
 <div class="App">
 
-  <section class="menu">
-    <figure class="logo">
-      <img src="https://i.imgur.com/9FIULiK.jpg?1" alt="" class="image_logo">
+  <section class="menu" id="mn">
+    <figure class="logo" id='menu_bt'>
+      <img src="https://i.imgur.com/9FIULiK.jpg?1" alt="" class="image_logo" on:click={deployMenu}>
     </figure>
     <ul class="menu_items">
       <li class="ml" on:click = {mb}>Bienvenido</li>
