@@ -10,7 +10,7 @@ var paqText = 'Alojamiento completo, transporte y las comidas que se describen e
 var text = new String();
 var texto = new Array();
 
-texto[0] = "El Test Fuinciono Hoospedaje tipo Camping, nos llamamos La Quinta Maravilla y te brindaremos el Confort que te mereces.";
+texto[0] = "Hospedaje tipo Camping, nos llamamos La Quinta Maravilla y te brindaremos el Confort que te mereces.";
 
 texto[1] = "Conoce el hermoso cañon el sumidero en Tuxtla Gutierrez Chiapas uno de los estados mas hermosos de todo Mexico";
 text = texto[0];
