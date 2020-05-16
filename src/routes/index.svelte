@@ -33,44 +33,75 @@ function chgCnt2(){
   text = texto[x];
   document.getElementById('welcome_img').style.backgroundImage = "url('https://i.imgur.com/NUB8i04.jpg')";
 }
-
+var scrWidth = window.matchMedia("(max-width: 1023px)")
 
 function paventura(){
   paquete = 'aventura';
   pOption = 0;
   paqText = 'Al acampar, suministramos el equipo completo de camping. todos los alojamientos, incluyendo las tiendas de campaña, se establecen sobre la base de la ocupación doble. De vez en cuando podríamos permanecer en cabañas de madera o una yurta local como estilo dormitorio. Esto es parte de la experiencia de unas vacaciones de aventura y se requiere un enfoque flexible.';
-  document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/H2yACAJ.jpg')";
+  
+    if(scrWidth.matches){
+    document.getElementById('activities').style.backgroundImage = "url('https://i.imgur.com/H2yACAJ.jpg')";
+    
+  }
+  else{
+    document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/H2yACAJ.jpg')";
+  }
   
 }
 function promance(){
 paquete = 'romance';
 pOption = 1;
 paqText = 'Una noche especial para compartir con esa persona especial. Nuestro paquete para dos personas con: hospedaje por una noche camping.';
-document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/1Rvx3eU.jpg')";
+
+  if(scrWidth.matches){
+    document.getElementById('activities').style.backgroundImage = "url('https://i.imgur.com/1Rvx3eU.jpg')";
+    
+  }
+  else{
+    document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/1Rvx3eU.jpg')";
+  }
 }
 function prelajacion(){
   paquete = 'relajacion';
   pOption = 2;
   paqText = 'Vive todos los atractivos que el cañón del sumidero te ofrece, adentrándote en sus bellas aguas, disfrutando de un momento de relajación. Y para tener un descanso completo disfruta de un masaje escuchando el cantar de la fauna que este atractivo paquete te ofrece ';
-  document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/X0y1iIg.jpg')";
+  
+  if(scrWidth.matches){
+    document.getElementById('activities').style.backgroundImage = "url('https://i.imgur.com/X0y1iIg.jpg')";
+    
+  }
+  else{
+    document.getElementById('paq_c').style.backgroundImage = "url('https://i.imgur.com/X0y1iIg.jpg')";
+  }
+  
   
 }
 
 function mb(){
   mOption = 0;
+  deployMenu();
 }
 function ma(){
   mOption = 1;
+  deployMenu();
 }
 function mc(){
   mOption = 2;
+  deployMenu();
 }
 
-
+var menuD = 0;
 
 function deployMenu(){
-
-   
+  if(menuD === 0){
+    document.getElementById('mn').style.left = "0px";
+    menuD = 1;
+  }
+  else{
+    document.getElementById('mn').style.left = "-50vw";
+    menuD = 0;
+  }
   
 
 }
@@ -427,6 +458,7 @@ function deployMenu(){
   }
   @media (max-width:1023px){
     #mn{
+      background-color: #1312127a;
       flex-direction: column;
     align-items: self-start;
     width: 50vw;
@@ -434,6 +466,7 @@ function deployMenu(){
     height: 100vh;
     z-index: 1;
         justify-content: flex-start;
+        transition: 2s;
     }
     .menu_items{
       
@@ -449,11 +482,65 @@ function deployMenu(){
       position: fixed;
       top:0;
       left:0;
+      opacity: .3;
     }
-    .app_content{
+   
+            .app_content{
+              grid-template-areas:
+        "paq paq paq"
+        "ct ct ct"
+        "ct ct ct";
       top: 0;
       height: 100vh;
-    }
+        }
+        #le{
+          display: none;
+          grid-area: unset;
+        }
+        #ri{
+          display: none;
+          grid-area: unset;
+        }
+
+        #welcome{
+          grid-template-areas:
+        "cont cont cont cont"
+        "cont cont cont cont";
+        background-image: url('https://i.imgur.com/NUB8i04.jpg');
+        background-size: cover;
+        }
+        #welcome_img{
+          display: none;
+        }
+        #welcome_cont{
+          justify-content: center;
+          align-items: flex-start;
+        }
+        .welcome_title{
+          padding: 0;
+          padding-left: 5%;
+          margin-top: 10%;
+          
+        }
+
+     #activities {
+  
+            grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+        grid-template-areas: "paq_title "
+                               "img" ;   
+        background-image: url("https://i.imgur.com/H2yACAJ.jpg");
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        box-shadow: 20px 20px 20px 20px rgba(0,0,0,1);
+ }
+  .paq_title{
+    grid-area: paq_title;
+    text-align: left;
+    padding: 5%;
+  }
+
   }
 
 </style>
