@@ -549,10 +549,10 @@ function deployMenu(){
     background-image: unset;
   }
   .contText{
-    font-size: .5em;
+    font-size: .4em;
   }
   .liav{
-    font-size: .5em;
+    font-size: .4em;
     color: aliceblue;
   }
   .paq_list{
