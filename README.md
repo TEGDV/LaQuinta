@@ -14,7 +14,7 @@ If want to creck it visit [https://laquintamaravilla.netlify.app/](https://laqui
 
 ## iPad
 
-  	[Imgur](https://i.imgur.com/UKg4QC0.png?1)
+  	[](https://i.imgur.com/UKg4QC0.png)
     
 ## Desktop
 
