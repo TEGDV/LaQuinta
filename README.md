@@ -10,12 +10,12 @@ If want to creck it visit [https://laquintamaravilla.netlify.app/](https://laqui
 
 ## Mobile
 	
-	![Mobile Preview "Bienvenido" home section](https://imgur.com/UKg4QC0)
+	[Imgur](https://i.imgur.com/UKg4QC0.png?1)
 
 ## iPad
 
-  	![iPad Preview "Paqutes Section"](https://imgur.com/BO21SXL)
+  	[Imgur](https://i.imgur.com/UKg4QC0.png?1)
     
 ## Desktop
 
-    ![Desktop Preview Welcome Section](https://imgur.com/vQJqbgb)
+	[Imgur](https://i.imgur.com/vQJqbgb.png)
