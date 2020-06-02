@@ -9,13 +9,14 @@ If want to creck it visit [https://laquintamaravilla.netlify.app/](https://laqui
 
 
 ## Mobile
-	
+
+![](https://i.imgur.com/UKg4QC0.png?3)
 	
 
 ## iPad
 
-  	
+ ![](https://i.imgur.com/BO21SXL.png?1) 	
     
 ## Desktop
 	
-	
+![](https://i.imgur.com/vQJqbgb.png?1)
